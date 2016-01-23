@@ -1,0 +1,105 @@
+#!/usr/bin/perl
+$target = shift(@ARGV);
+$home = $ENV{'HOME'};
+$mydata = "$home/mydata";
+if ($target eq "oj" || $target eq "openjdk"){
+	$dir="$mydata/openjdk/9dev";
+}
+elsif($target eq "jdk6032" || $target eq "6032"){
+	$dir = "$mydata/J9Codes/jtc/jdk60/32bit/jre/lib/ppc";
+}
+elsif ($target eq "jdk6064" || $target eq "6064"){
+	$dir="$mydata/J9Codes/jtc/jdk60/64bit/jre/lib/ppc64/default";
+}
+elsif($target eq "jdk6064cr" || $target eq "6064cr"){
+	$dir = "$mydata/J9Codes/jtc/jdk60/64bitcr/jre/lib/ppc64/compressedrefs";
+}
+
+elsif ($target eq "jdk8032" || $target eq "8032"){
+	$dir="$mydata/J9Codes/jtc/jdk80/32bit";
+}
+elsif ($target eq "jdk8064" || $target eq "8064"){
+	$dir="$mydata/J9Codes/jtc/jdk80/64bit";
+}
+elsif ($target eq "jdk8064cr" || $target eq "8064cr"){
+	$dir="$mydata/J9Codes/jtc/jdk80/64bitcr";
+}
+elsif ($target eq "jdk7064" || $target eq "7064"){
+	$dir="$mydata/J9Codes/jtc/jdk70/64bit/jre/lib/ppc64/default";
+}
+elsif ($target eq "jdk7064cr" || $target eq "7064cr"){
+	$dir="$mydata/J9Codes/jtc/jdk70/64bitcr/jre/lib/ppc64/compressedrefs";
+}
+elsif ($target eq "jdk7164" || $target eq "7164"){
+	$dir="$mydata/J9Codes/jtc/jdk71/64bit/jre/lib/ppc64/default";
+}
+elsif ($target eq "jdk7164cr" || $target eq "7164cr"){
+	$dir="$mydata/J9Codes/jtc/jdk71/64bitcr/jre/lib/ppc64/compressedrefs";
+}
+elsif ($target eq "jdk7032" || $target eq "7032"){
+	$dir="$mydata/J9Codes/jtc/jdk70/32bit/jre/lib/ppc/default";
+}
+elsif ($target eq "jdk7132" || $target eq "7132"){
+	$dir="$mydata/J9Codes/jtc/jdk71/32bit/jre/lib/ppc/default";
+}
+elsif ($target eq "jdk62632" || $target eq "62632"){
+	$dir="$mydata/J9Codes/jtc/jdk626/32bit/jre/lib/ppc/default";
+}
+elsif ($target eq "jdk62664" || $target eq "62664"){
+	$dir="$mydata/J9Codes/jtc/jdk626/64bit/jre/lib/ppc64/default";
+}
+elsif ($target eq "jdk62664cr" || $target eq "62664cr"){
+	$dir="$mydata/J9Codes/jtc/jdk626/64bitcr/jre/lib/ppc64/compressedrefs";
+}
+elsif($target eq "jdk5032" || $target eq "5032"){
+	$dir = "$mydata/J9Codes/jtc/jdk50/32bit/jre/bin";
+}
+elsif($target eq "jdk5064" || $target eq "5064"){
+	$dir = "$mydata/J9Codes/jtc/jdk50/64bit/jre/bin";
+}
+elsif($target eq "jdk1464" || $target eq "1464"){
+	$dir = "$mydata/J9Codes/jtc/jdk14/64bit/jre/bin";
+}
+elsif($target eq "v6r1" || $target eq "61"){
+	$dir = "$mydata/J9Codes/ibmi/61";
+}
+elsif($target eq "v5r4" || $target eq "54"){
+	$dir = "$mydata/J9Codes/ibmi/54";
+}
+elsif($target eq "v7r1" || $target eq "71"){
+	$dir = "$mydata/J9Codes/ibmi/71";
+}
+elsif($target eq "v7r2" || $target eq "72"){
+	$dir = "$mydata/J9Codes/ibmi/72";
+}
+elsif($target eq "v6r1m13" || $target eq "6113"){
+	$dir = "$mydata/J9Codes/ibmi/6113";
+}
+elsif($target eq "v6r1m14" || $target eq "6114"){
+	$dir = "$mydata/J9Codes/ibmi/6114";
+}
+elsif($target eq "v6r1m15" || $target eq "6115"){
+	$dir = "$mydata/J9Codes/ibmi/6115";
+}
+elsif($target eq "v6r1m16" || $target eq "6116"){
+	$dir = "$mydata/J9Codes/ibmi/6116";
+}
+elsif($target eq "v6r1m17" || $target eq "6117"){
+	$dir = "$mydata/J9Codes/ibmi/6117";
+}
+elsif($target eq "v5r4m11" || $target eq "5411"){
+	$dir = "$mydata/J9Codes/ibmi/5411";
+}
+elsif($target eq "kvm"){
+	$dir = "$mydata/kvmCodes/kvm";
+}
+elsif($target eq "linux"){
+	$dir = "$mydata/linuxKernal/linux-3.0.4";
+}
+elsif($target eq "jcl"){
+	$dir = "$mydata/J9Codes/jtc/JCL/jdk60-20120321/source/src/j2se/src/IBMi";
+}
+else{
+	$dir = ".";
+}
+print "$dir";
