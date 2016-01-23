@@ -2,7 +2,8 @@
 $target = shift(@ARGV);
 $home = $ENV{'HOME'};
 $mydata = "$home/mydata";
-if ($target eq "ojj" || $target eq "openjdk"){
+#fix the issue in master.Using the fix in btest instead.
+if ($target eq "oj" || $target eq "openjdk" || $target eq "ojdk"){
 	$dir="$mydata/openjdk/9dev";
 }
 elsif($target eq "jdk6032" || $target eq "6032"){
