@@ -2,7 +2,7 @@
 $target = shift(@ARGV);
 $home = $ENV{'HOME'};
 $mydata = "$home/mydata";
-if ($target eq "oj" || $target eq "openjdk"){
+if ($target eq "oj" || $target eq "openjdk" || $target eq "ojdk"){
 	$dir="$mydata/openjdk/9dev";
 }
 elsif($target eq "jdk6032" || $target eq "6032"){
