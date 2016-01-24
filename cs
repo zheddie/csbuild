@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#Usage: cs <project name, such as 62632>
+#Usage?: cs <project name, such as 62632>
 $target = shift(@ARGV);
 $csdir = `findcsdir $target`;
 $dir = `finddir $target`;
