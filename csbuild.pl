@@ -1,5 +1,10 @@
 #!/usr/bin/perl
+$Usage = "Usage:\n\tcsbuild.pl <projectName>";
 $target=shift(@ARGV);
+if ($target eq ""){
+	print($Usage);
+	exit(1);
+}
 print "CS building for project $target.....\n";
 if(not $target eq ""){
 	$dir = `finddir $target`;
